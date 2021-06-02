@@ -6,25 +6,25 @@ namespace Diligent
 
 Application* CreateDiligentApplication()
 {
-    return new MarzdUI();
+    return new MyApp();
 }
 
-void MarzdUI::ProcessCommandLine(const char* CmdLine)
+void MyApp::ProcessCommandLine(const char* CmdLine)
 {
     Application::ProcessCommandLine(CmdLine);
 }
 
-void MarzdUI::Initialize(const ApplicationInitInfo& InitInfo)
+void MyApp::Initialize(const ApplicationInitInfo& InitInfo)
 {
     Application::Initialize(InitInfo);
 }
 
-MarzdUI::~MarzdUI()
+MyApp::~MyApp()
 {
 }
 
 // Render a frame
-void MarzdUI::Render()
+void MyApp::Render()
 {
     auto* pRTV = m_pSwapChain->GetCurrentBackBufferRTV();
     auto* pDSV = m_pSwapChain->GetDepthBufferDSV();
@@ -37,7 +37,7 @@ void MarzdUI::Render()
 }
 
 
-void MarzdUI::Update(double CurrTime, double ElapsedTime)
+void MyApp::Update(double CurrTime, double ElapsedTime)
 {
 
     Application::Update(CurrTime, ElapsedTime);
