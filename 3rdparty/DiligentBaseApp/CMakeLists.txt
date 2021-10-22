@@ -24,7 +24,7 @@ if(PLATFORM_WIN32)
     function(append_base_win32_source TARGET_NAME)
         get_target_property(SAMPLE_BASE_SOURCE_DIR ${PROJECT_NAME} SOURCE_DIR)
         # We need to add .res file to executable target to make resources available
-        set(RES_FILE ${SAMPLE_BASE_SOURCE_DIR}/src/Win32/resources/Win32AppResource.rc)
+        set(RES_FILE ${SAMPLE_BASE_SOURCE_DIR}/3rdparty/DiligentBaseApp/src/Win32/resources/Win32AppResource.rc)
         target_sources(${TARGET_NAME} PRIVATE ${RES_FILE})
         source_group("resources" FILES ${RES_FILE})
     endfunction()
